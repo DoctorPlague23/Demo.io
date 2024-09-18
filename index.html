@@ -3,9 +3,124 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Привіт Світ</title>
+    <title>Вивчення Git</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        ul li {
+            margin: 5px 0;
+        }
+        ul li::before {
+            content: "✔";
+            color: green;
+            margin-right: 10px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        .certificate {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 2px dashed #333;
+            text-align: center;
+        }
+        .certificate h3 {
+            color: #e74c3c;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World</h1>
+
+<header>
+    <h1>Вивчення Git та систем контролю версій</h1>
+</header>
+
+<section>
+    <h2>Коротка інформація про системи контролю версій</h2>
+    <p>Система контролю версій (VCS) — це інструмент для відстеження змін в файлах, що дозволяє розробникам працювати над одним проектом одночасно. Однією з найпопулярніших систем є Git, який використовується для управління проєктами програмного забезпечення.</p>
+</section>
+
+<section>
+    <h2>Основні можливості та переваги використання Git</h2>
+    <ul>
+        <li>Локальне зберігання версій файлів</li>
+        <li>Підтримка розподіленої розробки</li>
+        <li>Паралельна робота в команді</li>
+        <li>Легкий перехід між різними версіями проєкту</li>
+        <li>Відновлення попередніх версій файлів</li>
+        <li>Велика кількість безкоштовних інструментів і сервісів</li>
+    </ul>
+</section>
+
+<section>
+    <h2>10 базових команд Git</h2>
+    <ol>
+        <li><code>git init</code> — ініціалізація нового репозиторію</li>
+        <li><code>git clone</code> — клонування існуючого репозиторію</li>
+        <li><code>git status</code> — перевірка статусу змін в робочій копії</li>
+        <li><code>git add</code> — додавання файлів до індексації (стейджинг)</li>
+        <li><code>git commit</code> — фіксація змін з повідомленням</li>
+        <li><code>git pull</code> — завантаження змін з віддаленого репозиторію</li>
+        <li><code>git push</code> — відправка змін до віддаленого репозиторію</li>
+        <li><code>git branch</code> — управління гілками (створення нової гілки)</li>
+        <li><code>git checkout</code> — перехід між гілками</li>
+        <li><code>git merge</code> — об'єднання гілок</li>
+    </ol>
+</section>
+
+<section class="certificate">
+    <h3>Сертифікат курсу по Git</h3>
+    <p>Вітаємо! Ви успішно завершили курс по Git. Нижче представлений ваш сертифікат:</p>
+    <img src="certificate.png" alt="Сертифікат" width="300">
+</section>
+
+<section>
+    <h2>Джерела інформації</h2>
+    <ul>
+        <li><a href="https://git-scm.com/" target="_blank">Офіційна документація Git</a></li>
+        <li><a href="https://learngitbranching.js.org/" target="_blank">Інтерактивне навчання гілкування в Git</a></li>
+        <li><a href="https://www.atlassian.com/git" target="_blank">Git під Atlassian</a></li>
+    </ul>
+</section>
+
+<footer>
+    <p>&copy; 2024 Вивчення Git</p>
+</footer>
+
 </body>
 </html>
