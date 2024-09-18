@@ -3,124 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Вивчення Git</title>
+    <title>Веб-сторінка про Git</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            line-height: 1.6;
             margin: 0;
-            padding: 20px;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-        section {
-            margin: 20px 0;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        ul {
-            list-style-type: none;
             padding: 0;
         }
-        ul li {
-            margin: 5px 0;
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
         }
-        ul li::before {
-            content: "✔";
-            color: green;
-            margin-right: 10px;
-        }
-        footer {
-            background-color: #333;
+        header {
+            background: #333;
             color: #fff;
+            padding: 1rem 0;
             text-align: center;
-            padding: 10px;
-            margin-top: 20px;
+        }
+        .main-content {
+            padding: 2rem;
+        }
+        h2 {
+            color: #333;
+        }
+        .command-list {
+            margin: 1rem 0;
+        }
+        .command-list li {
+            margin-bottom: 0.5rem;
         }
         .certificate {
-            background-color: #f9f9f9;
-            padding: 20px;
-            border: 2px dashed #333;
+            margin: 2rem 0;
+        }
+        .certificate img {
+            max-width: 100%;
+        }
+        .sources {
+            margin-top: 2rem;
+        }
+        footer {
+            background: #333;
+            color: #fff;
             text-align: center;
-        }
-        .certificate h3 {
-            color: #e74c3c;
-        }
-        a {
-            color: #3498db;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
+            padding: 1rem 0;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>Тема: Git</h1>
+    </header>
+    <div class="container">
+        <div class="main-content">
+            <section>
+                <h2>Що таке системи контролю версій та Git</h2>
+                <p>Системи контролю версій (VCS) — це програмні системи, які допомагають відслідковувати зміни в коді, що дозволяє програмістам працювати разом над проектами, зберігати історію змін та відновлювати попередні версії коду. Git — одна з найбільш популярних систем контролю версій, розроблена Лінусом Торвальдсом. Git відрізняється швидкістю, надійністю та розподіленою архітектурою, що дозволяє працювати над проектами без постійного підключення до центрального сервера.</p>
+            </section>
 
-<header>
-    <h1>Вивчення Git та систем контролю версій</h1>
-</header>
+            <section>
+                <h2>Основні можливості та переваги використання Git</h2>
+                <ul>
+                    <li>Розподілена архітектура: Кожен користувач має свою повну копію репозиторія.</li>
+                    <li>Швидкість роботи: Git забезпечує швидкий доступ до історії версій та гілок.</li>
+                    <li>Гнучкість у роботі з гілками: Легке створення, злиття та видалення гілок.</li>
+                    <li>Підтримка нелінійної історії: Можливість працювати з кількома паралельними гілками.</li>
+                    <li>Висока надійність: Записи в репозиторії є незмінними, завдяки механізму хешування.</li>
+                </ul>
+            </section>
 
-<section>
-    <h2>Коротка інформація про системи контролю версій</h2>
-    <p>Система контролю версій (VCS) — це інструмент для відстеження змін в файлах, що дозволяє розробникам працювати над одним проектом одночасно. Однією з найпопулярніших систем є Git, який використовується для управління проєктами програмного забезпечення.</p>
-</section>
+            <section>
+                <h2>10 базових команд Git</h2>
+                <ul class="command-list">
+                    <li><strong>git init</strong> - Ініціалізує новий Git-репозиторій.</li>
+                    <li><strong>git clone [url]</strong> - Клонує репозиторій з віддаленого сервера.</li>
+                    <li><strong>git add [file]</strong> - Додає файл до індексу для коміту.</li>
+                    <li><strong>git commit -m "[message]"</strong> - Зберігає зміни з коментарем.</li>
+                    <li><strong>git status</strong> - Показує статус змін у репозиторії.</li>
+                    <li><strong>git pull</strong> - Завантажує останні зміни з віддаленого репозиторія та зливає їх з локальною версією.</li>
+                    <li><strong>git push</strong> - Відправляє локальні зміни до віддаленого репозиторія.</li>
+                    <li><strong>git branch</strong> - Переглядає, створює або видаляє гілки.</li>
+                    <li><strong>git merge [branch]</strong> - Зливає вказану гілку з поточною.</li>
+                    <li><strong>git log</strong> - Показує історію комітів.</li>
+                </ul>
+            </section>
 
-<section>
-    <h2>Основні можливості та переваги використання Git</h2>
-    <ul>
-        <li>Локальне зберігання версій файлів</li>
-        <li>Підтримка розподіленої розробки</li>
-        <li>Паралельна робота в команді</li>
-        <li>Легкий перехід між різними версіями проєкту</li>
-        <li>Відновлення попередніх версій файлів</li>
-        <li>Велика кількість безкоштовних інструментів і сервісів</li>
-    </ul>
-</section>
+            <section class="certificate">
+                <h2>Сертифікат курсу по Git</h2>
+                <img src="certificate.png" alt="Сертифікат курсу по Git">
+                <!-- Замість "certificate.png" вставте шлях до вашого сертифікату -->
+            </section>
 
-<section>
-    <h2>10 базових команд Git</h2>
-    <ol>
-        <li><code>git init</code> — ініціалізація нового репозиторію</li>
-        <li><code>git clone</code> — клонування існуючого репозиторію</li>
-        <li><code>git status</code> — перевірка статусу змін в робочій копії</li>
-        <li><code>git add</code> — додавання файлів до індексації (стейджинг)</li>
-        <li><code>git commit</code> — фіксація змін з повідомленням</li>
-        <li><code>git pull</code> — завантаження змін з віддаленого репозиторію</li>
-        <li><code>git push</code> — відправка змін до віддаленого репозиторію</li>
-        <li><code>git branch</code> — управління гілками (створення нової гілки)</li>
-        <li><code>git checkout</code> — перехід між гілками</li>
-        <li><code>git merge</code> — об'єднання гілок</li>
-    </ol>
-</section>
+            <section class="sources">
+                <h2>Джерела інформації</h2>
+                <ul>
+                    <li><a href="https://git-scm.com/">Офіційний сайт Git</a></li>
+                    <li><a href="https://www.atlassian.com/git/tutorials/what-is-git">Atlassian: Що таке Git</a></li>
+                    <li><a href="https://www.codecademy.com/learn/learn-git">Codecademy: Вчимося Git</a></li>
+                </ul>
+            </section>
+        </div>
+    </div>
 
-<section class="certificate">
-    <h3>Сертифікат курсу по Git</h3>
-    <p>Вітаємо! Ви успішно завершили курс по Git. Нижче представлений ваш сертифікат:</p>
-    <img src="certificate.png" alt="Сертифікат" width="300">
-</section>
-
-<section>
-    <h2>Джерела інформації</h2>
-    <ul>
-        <li><a href="https://git-scm.com/" target="_blank">Офіційна документація Git</a></li>
-        <li><a href="https://learngitbranching.js.org/" target="_blank">Інтерактивне навчання гілкування в Git</a></li>
-        <li><a href="https://www.atlassian.com/git" target="_blank">Git під Atlassian</a></li>
-    </ul>
-</section>
-
-<footer>
-    <p>&copy; 2024 Вивчення Git</p>
-</footer>
-
+    <footer>
+        <p>&copy; 2024 Веб-сторінка про Git</p>
+    </footer>
 </body>
 </html>
