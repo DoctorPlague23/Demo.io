@@ -22,6 +22,22 @@
             padding: 1rem 0;
             text-align: center;
         }
+        nav {
+            text-align: center;
+            margin: 1rem 0;
+        }
+        nav button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #333;
+            color: white;
+            border: none;
+        }
+        nav button:hover {
+            background-color: #555;
+        }
         .main-content {
             padding: 2rem;
         }
@@ -50,11 +66,31 @@
             padding: 1rem 0;
         }
     </style>
+    <script>
+        function goToGit() {
+            window.location.href = "git.html";
+        }
+
+        function goToLinux() {
+            window.location.href = "linux.html";
+        }
+
+        function goToJava() {
+            window.location.href = "java.html";
+        }
+    </script>
 </head>
 <body>
     <header>
         <h1>Тема: Git</h1>
     </header>
+
+    <nav>
+        <button onclick="goToGit()">Git</button>
+        <button onclick="goToLinux()">Linux</button>
+        <button onclick="goToJava()">Java</button>
+    </nav>
+
     <div class="container">
         <div class="main-content">
             <section>
